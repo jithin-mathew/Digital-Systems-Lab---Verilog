@@ -1,0 +1,72 @@
+#! /usr/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x117e220 .scope module, "testbench" "testbench" 2 17;
+ .timescale 0 0;
+v0x11916f0_0 .net "q", 0 0, L_0x1191d60; 1 drivers
+v0x1191790_0 .var "qb", 0 0;
+v0x1191840_0 .var "r", 0 0;
+v0x11918f0_0 .var "s", 0 0;
+v0x11919d0_0 .net "t", 0 0, L_0x1191c10; 1 drivers
+S_0x117e310 .scope module, "f1" "SR" 2 21, 2 1, S_0x117e220;
+ .timescale 0 0;
+L_0x1191a80 .functor NAND 1, v0x11918f0_0, C4<1>, C4<1>, C4<1>;
+L_0x1191b60 .functor NAND 1, v0x1191840_0, C4<1>, C4<1>, C4<1>;
+L_0x1191c10 .functor NAND 1, L_0x1191b60, v0x1191790_0, C4<1>, C4<1>;
+L_0x1191d60 .functor NAND 1, L_0x1191a80, L_0x1191c10, C4<1>, C4<1>;
+v0x1148690_0 .alias "q", 0 0, v0x11916f0_0;
+v0x11912e0_0 .net "q1", 0 0, L_0x1191a80; 1 drivers
+v0x1191380_0 .net "q2", 0 0, L_0x1191b60; 1 drivers
+v0x1191420_0 .net "qb", 0 0, v0x1191790_0; 1 drivers
+v0x11914d0_0 .net "r", 0 0, v0x1191840_0; 1 drivers
+v0x1191570_0 .net "s", 0 0, v0x11918f0_0; 1 drivers
+v0x1191650_0 .alias "t", 0 0, v0x11919d0_0;
+    .scope S_0x117e220;
+T_0 ;
+    %vpi_call 2 26 "$monitor", "S = %b : R = %b : Q[1] =%b : Q = %b : Q` = %b", v0x11918f0_0, v0x1191840_0, v0x1191790_0, v0x11916f0_0, v0x11919d0_0;
+    %vpi_call 2 27 "$dumpfile", "sr.vcd";
+    %vpi_call 2 28 "$dumpvars";
+    %set/v v0x1191790_0, 0, 1;
+    %set/v v0x11918f0_0, 0, 1;
+    %set/v v0x1191840_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x11918f0_0, 0, 1;
+    %set/v v0x1191840_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x11918f0_0, 1, 1;
+    %set/v v0x1191840_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x11918f0_0, 1, 1;
+    %set/v v0x1191840_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x11918f0_0, 1, 1;
+    %set/v v0x1191840_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x1191790_0, 1, 1;
+    %set/v v0x11918f0_0, 0, 1;
+    %set/v v0x1191840_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x11918f0_0, 0, 1;
+    %set/v v0x1191840_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x11918f0_0, 1, 1;
+    %set/v v0x1191840_0, 0, 1;
+    %delay 5, 0;
+    %set/v v0x11918f0_0, 1, 1;
+    %set/v v0x1191840_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x11918f0_0, 1, 1;
+    %set/v v0x1191840_0, 1, 1;
+    %delay 5, 0;
+    %set/v v0x11918f0_0, 1, 1;
+    %set/v v0x1191840_0, 1, 1;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "sr.v";

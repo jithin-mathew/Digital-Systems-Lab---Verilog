@@ -1,0 +1,125 @@
+$date
+	Mon Mar 19 18:38:49 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_tm $end
+$var wire 1 ! equal $end
+$var wire 1 " greater $end
+$var wire 1 # less $end
+$var reg 2 $ A [1:0] $end
+$var reg 2 % B [1:0] $end
+$scope module uut $end
+$var wire 2 & A [1:0] $end
+$var wire 2 ' B [1:0] $end
+$var reg 1 ( equal $end
+$var reg 1 ) greater $end
+$var reg 1 * less $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0*
+0)
+1(
+b0 '
+b0 &
+b0 %
+b0 $
+0#
+0"
+1!
+$end
+#5
+0(
+0!
+1*
+1#
+b1 %
+b1 '
+#10
+b10 %
+b10 '
+#15
+b11 %
+b11 '
+#20
+1)
+1"
+0*
+0#
+b0 %
+b0 '
+b1 $
+b1 &
+#25
+0)
+0"
+1(
+1!
+b1 %
+b1 '
+#30
+0(
+0!
+1*
+1#
+b10 %
+b10 '
+#35
+b11 %
+b11 '
+#40
+1)
+1"
+0*
+0#
+b0 %
+b0 '
+b10 $
+b10 &
+#45
+b1 %
+b1 '
+#50
+0)
+0"
+1(
+1!
+b10 %
+b10 '
+#55
+0(
+0!
+1*
+1#
+b11 %
+b11 '
+#60
+1)
+1"
+0*
+0#
+b0 %
+b0 '
+b11 $
+b11 &
+#65
+b1 %
+b1 '
+#70
+b10 %
+b10 '
+#75
+0)
+0"
+1(
+1!
+b11 %
+b11 '
+#80
